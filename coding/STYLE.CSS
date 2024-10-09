@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 4ch;
+    row-gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: wheat;
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    z-index: 1;
+}
+
+@media (max-width: 410px) {
+    header {
+        position: static;
+        flex-direction: column;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+header a {
+    color: inherit;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3ch;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding-inline: 3em;
+    margin-block: 4em;
+}
+
+section#introduction {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5ch;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+section#introduction img {
+    width: 15em;
+    height: 15em;
+    max-width: 75vw;
+    max-height: 75vw;
+    margin-inline: auto;
+    border-radius: 25px;
+}
+
+section#introduction .intro {
+    width: fit-content;
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+section#portofolio {
+    width: fit-content;
+    margin-inline: auto;
+}
+
+section#portofolio .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+    gap: 3ch;
+    width: calc(100dvw - 6em);
+    max-width: 90em;
+}
+
+section#portofolio .project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 0.15em solid darkorchid;
+    min-height: 15em;
+    height: fit-content;
+    font: inherit;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+section#portofolio .project:hover {
+    border-color: whitesmoke;
+}
+
+section#portofolio .project h3 {
+  margin-block: 0;
+}
+
+section#portofolio .project p {
+  font-style: italic;
+  margin: 0;
+}
+
+section#portofolio .project img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  align-self: center;
+  object-fit: cover;
+  z-index: -1;
+}
+
+section#contact {
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+section#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+section#contact input, section#contact textarea {
+  margin-block-end: 0.5em;
+  border-style: solid;
+}
+
+section#contact input {
+  border-radius: 2em;
+  padding-inline: 1.5ch;
+  padding-block: 0.5em;
+}
+
+section#contact textarea {
+  border-radius: 2em;
+  padding: 1em;
+  height: 5em;
+}
+
+textarea {
+  resize: none;
+}
+
+section#contact button {
+  cursor: pointer;
+  margin-block-start: 0.5em;
+  padding-block: 0.5em;
+  border-radius: 2em;
+  border-style: solid;
+}
+
+section#contact button:hover {
+  border-color: #638;
+  box-shadow: 0 0 0.8em #638;
+}
+
+input {
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input:focus {
+  border-color: rgb(255, 230, 0);
+  outline: none;
+}
+
+textarea {
+  padding: 10px;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+textarea:focus {
+  border-color: rgb(255, 242, 0);
+  outline: none;
+}
+
+footer {
+  gap: 1em;
+  padding: 4em 1em 1em 1em;
+  text-align: center;
+  background: linear-gradient(#0000 0em, #000 100%);
+  color: white;
+}
+
+:root {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+      color-scheme: light;
+      background-color: burlywood;
+  }
+}
